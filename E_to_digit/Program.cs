@@ -4,33 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 //failed to do alone
-namespace Practical_projects
+namespace E_to_digit
 {
     class Program
     {
         static void Main(string[] args)
         {
-            const double Pi = Math.PI;
+            const double E = Math.E;
 
             string value;
 
             do
             {
-                Console.WriteLine("Pi to the Nth digit");
-                Console.WriteLine("Enter N Limit is 15");
+                Console.WriteLine("E to the Nth digit");
+                Console.WriteLine("Enter N, Limit is 15");
                 value = Console.ReadLine();
             } while (isDigitOnly(value) == false);
 
             if (Convert.ToInt16(value) >= 15)
             {
-                Console.WriteLine(Math.Round(Pi, Convert.ToInt16(15)));
+                Console.WriteLine(Math.Round(E,Convert.ToInt16(15)));
             }
             else
             {
-                Console.WriteLine(Math.Round(Pi, Convert.ToInt16(value)));
+                Console.WriteLine(Math.Round(E, Convert.ToInt16(value)));
             }
+           
         }
-
         public static bool isDigitOnly(string value)
         {
             foreach (char c in value)
